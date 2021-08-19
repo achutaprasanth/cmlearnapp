@@ -43,7 +43,6 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     serializer_class = serializers.ProfileFeedItemSerializer
     queryset = models.ProfileFeedItem.objects.all()
-    print(queryset)
     permission_classes = (
         permissions.UpdateOwnStatus,
         # IsAuthenticatedOrReadOnly,  # can able to view feed even not authenticated
